@@ -113,6 +113,22 @@ public final class SOLSweetPotatoConfig
 	public static Integer minFoodsToActivate() {
 		return SERVER.minFoodsToActivate.get();
 	}
+
+	public static Integer lunchbagSlots() {
+		return SERVER.lunchbagSlots.get();
+	}
+
+	public static Integer lunchboxSlots() {
+		return SERVER.lunchboxSlots.get();
+	}
+
+	public static Integer goldenLunchboxSlots() {
+		return SERVER.goldenLunchboxSlots.get();
+	}
+
+	public static Integer netheriteLunchboxSlots() {
+		return SERVER.netheriteLunchboxSlots.get();
+	}
 	
 	public static class Server {
 		public final ConfigValue<List<? extends String>> blacklist;
@@ -135,6 +151,11 @@ public final class SOLSweetPotatoConfig
 		public final BooleanValue shouldForbiddenCount;
 
 		public final ConfigValue<List<? extends String>> complexityUnparsed;
+
+		public final IntValue lunchbagSlots;
+		public final IntValue lunchboxSlots;
+		public final IntValue goldenLunchboxSlots;
+		public final IntValue netheriteLunchboxSlots;
 
 		Server(Builder builder) {
 			builder.push("Benefits");
@@ -238,6 +259,30 @@ public final class SOLSweetPotatoConfig
 							+" make sure you change endDecay (below) to match queueSize, or else nothing will change!!!\n"
 							+"\n")
 					.defineInRange("queueSize", 32, 1, 1000);
+
+			lunchbagSlots = builder
+					.translation(localizationPath("lunchbag_slots"))
+					.comment("\n The number of slots for the lunchbag.\n"
+							+"\n")
+					.defineInRange("queueSize", 8, 1, 32);
+
+			lunchboxSlots = builder
+					.translation(localizationPath("lunchbox_slots"))
+					.comment("\n The number of slots for the lunchbox.\n"
+							+"\n")
+					.defineInRange("queueSize", 16, 2, 32);
+
+			goldenLunchboxSlots = builder
+					.translation(localizationPath("golden_lunchbox_slots"))
+					.comment("\n The number of slots for the golden lunchbox.\n"
+							+"\n")
+					.defineInRange("queueSize", 24, 3, 32);
+
+			netheriteLunchboxSlots = builder
+					.translation(localizationPath("netherite_lunchbox_slots"))
+					.comment("\n The number of slots for the netherite lunchbox.\n"
+							+"\n")
+					.defineInRange("queueSize", 32, 4, 32);
 
 			builder.pop();
 			builder.push("Advanced");

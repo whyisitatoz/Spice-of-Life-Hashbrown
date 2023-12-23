@@ -21,12 +21,14 @@ public final class SOLSweetPotatoItems
 				helper -> {
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "food_book"),
 							new FoodBookItem());
-					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "lunchbox"),
-							new FoodContainerItem(9,"lunchbox"));
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "lunchbag"),
-							new FoodContainerItem(5,"lunchbag"));
+							new FoodContainerItem(SOLSweetPotatoConfig.lunchbagSlots,"lunchbag"));
+					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "lunchbox"),
+							new FoodContainerItem(SOLSweetPotatoConfig.lunchboxSlots,"lunchbox"));
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "golden_lunchbox"),
-							new FoodContainerItem(14,"golden_lunchbox"));
+							new FoodContainerItem(SOLSweetPotatoConfig.goldenLunchboxSlots,"golden_lunchbox"));
+					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "netherite_lunchbox"),
+							new FoodContainerItem(SOLSweetPotatoConfig.netheriteLunchboxSlots,"netherite_lunchbox"));
 				});
 	}
 }
