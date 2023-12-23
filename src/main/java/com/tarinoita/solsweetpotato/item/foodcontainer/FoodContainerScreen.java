@@ -18,7 +18,11 @@ import net.minecraftforge.items.CapabilityItemHandler;
 public class FoodContainerScreen extends AbstractContainerScreen<FoodContainer> {
     public FoodContainerScreen(FoodContainer container, Inventory playerInventory, Component title) {
         super(container, playerInventory, title);
+        imageHeight += 22;
+        //titleLabelY += 22;
+        inventoryLabelY += 22;
     }
+
 
     @Override
     public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -31,16 +35,13 @@ public class FoodContainerScreen extends AbstractContainerScreen<FoodContainer> 
     protected void renderBg(PoseStack matrices, float partialTicks, int x, int y) {
         this.drawBackground(matrices, new ResourceLocation(SOLSweetPotato.MOD_ID, "textures/gui/inventory.png"));
         this.menu.containerItem.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-            int slotsPerRow = h.getSlots();
-            if (h.getSlots() > 9) {
-                slotsPerRow = h.getSlots() / 2;
-            }
+            int numSlots = h.getSlots();
+            int maxPerRow = 9;
+            int numRows = (numSlots + maxPerRow - 1) / maxPerRow;
+            int slotsPerRow = (numSlots + numRows - 1) / numRows;
             int xStart = (2*8 + 9*18 - slotsPerRow * 18) / 2;
-            int yStart = 17 + 18;
-            if (h.getSlots() > 9) {
-                yStart = 17 + (84-36-23)/2;
-            }
-            for (int i = 0; i < h.getSlots(); i++) {
+            int yStart = 18;
+            for (int i = 0; i < numSlots; i++) {
                 int row = i / slotsPerRow;
                 int col = i % slotsPerRow;
                 int xPos = xStart - 1 + col * 18;

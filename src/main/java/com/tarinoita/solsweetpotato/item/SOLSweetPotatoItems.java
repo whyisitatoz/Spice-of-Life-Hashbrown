@@ -1,6 +1,7 @@
 package com.tarinoita.solsweetpotato.item;
 
 import com.tarinoita.solsweetpotato.SOLSweetPotato;
+import com.tarinoita.solsweetpotato.SOLSweetPotatoConfig;
 import com.tarinoita.solsweetpotato.item.foodcontainer.FoodContainerItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,13 +23,13 @@ public final class SOLSweetPotatoItems
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "food_book"),
 							new FoodBookItem());
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "lunchbag"),
-							new FoodContainerItem(SOLSweetPotatoConfig.lunchbagSlots,"lunchbag"));
+							new FoodContainerItem(SOLSweetPotatoConfig.lunchbagSlots(),"lunchbag"));
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "lunchbox"),
-							new FoodContainerItem(SOLSweetPotatoConfig.lunchboxSlots,"lunchbox"));
+							new FoodContainerItem(SOLSweetPotatoConfig.lunchboxSlots(),"lunchbox"));
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "golden_lunchbox"),
-							new FoodContainerItem(SOLSweetPotatoConfig.goldenLunchboxSlots,"golden_lunchbox"));
+							new FoodContainerItem(SOLSweetPotatoConfig.goldenLunchboxSlots(),"golden_lunchbox"));
 					helper.register(new ResourceLocation(SOLSweetPotato.MOD_ID, "netherite_lunchbox"),
-							new FoodContainerItem(SOLSweetPotatoConfig.netheriteLunchboxSlots,"netherite_lunchbox"));
+							new FoodContainerItem(SOLSweetPotatoConfig.netheriteLunchboxSlots(),"netherite_lunchbox"));
 				});
 	}
 }

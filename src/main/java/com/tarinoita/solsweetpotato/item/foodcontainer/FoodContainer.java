@@ -43,16 +43,12 @@ public class FoodContainer extends AbstractContainerMenu {
         this.playerInventory = playerInventory;
         containerItem.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
             nslots = h.getSlots();
-            int slotsPerRow = h.getSlots();
-            if (h.getSlots() > 9) {
-                slotsPerRow = h.getSlots() / 2;
-            }
+            int maxPerRow = 9;
+            int numRows = (nslots + maxPerRow - 1) / maxPerRow;
+            int slotsPerRow = (nslots + numRows - 1) / numRows;
             int xStart = (2*8 + 9*18 - slotsPerRow * 18) / 2;
-            int yStart = 17 + 18;
-            if (h.getSlots() > 9) {
-                yStart = 17 + (84-36-23)/2;
-            }
-            for (int j = 0; j < h.getSlots(); j++) {
+            int yStart = 18;
+            for (int j = 0; j < nslots; j++) {
                 int row = j / slotsPerRow;
                 int col = j % slotsPerRow;
                 int xPos = xStart + col * 18;
@@ -61,7 +57,7 @@ public class FoodContainer extends AbstractContainerMenu {
             }
         });
 
-        layoutPlayerInventorySlots(8, 84);
+        layoutPlayerInventorySlots(8, 106);
     }
 
     @Override
