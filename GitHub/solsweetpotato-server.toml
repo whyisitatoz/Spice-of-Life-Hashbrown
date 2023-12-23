@@ -59,6 +59,26 @@
 	#
 	#
 	resetOnDeath = false
+	# The number of slots for the lunchbag.
+	#
+	#
+	#Range: 1 ~ 36
+	lunchbagSlots = 8
+	# The number of slots for the lunchbox.
+	#
+	#
+	#Range: 2 ~ 36
+	lunchboxSlots = 16
+	# The number of slots for the golden lunchbox.
+	#
+	#
+	#Range: 3 ~ 36
+	goldenLunchboxSlots = 24
+	# The number of slots for the netherite lunchbox.
+	#
+	#
+	#Range: 4 ~ 36
+	netheriteLunchboxSlots = 32
 
 [Advanced]
 	#
