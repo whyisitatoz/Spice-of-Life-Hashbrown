@@ -264,25 +264,25 @@ public final class SOLSweetPotatoConfig
 					.translation(localizationPath("lunchbag_slots"))
 					.comment("\n The number of slots for the lunchbag.\n"
 							+"\n")
-					.defineInRange("queueSize", 8, 1, 36);
+					.defineInRange("lunchbagSlots", 8, 1, 36);
 
 			lunchboxSlots = builder
 					.translation(localizationPath("lunchbox_slots"))
 					.comment("\n The number of slots for the lunchbox.\n"
 							+"\n")
-					.defineInRange("queueSize", 16, 2, 36);
+					.defineInRange("lunchboxSlots", 16, 2, 36);
 
 			goldenLunchboxSlots = builder
 					.translation(localizationPath("golden_lunchbox_slots"))
 					.comment("\n The number of slots for the golden lunchbox.\n"
 							+"\n")
-					.defineInRange("queueSize", 24, 3, 36);
+					.defineInRange("goldenLunchboxSlots", 24, 3, 36);
 
 			netheriteLunchboxSlots = builder
 					.translation(localizationPath("netherite_lunchbox_slots"))
 					.comment("\n The number of slots for the netherite lunchbox.\n"
 							+"\n")
-					.defineInRange("queueSize", 32, 4, 36);
+					.defineInRange("netheriteLunchboxSlots", 32, 4, 36);
 
 			builder.pop();
 			builder.push("Advanced");
