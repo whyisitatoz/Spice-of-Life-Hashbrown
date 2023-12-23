@@ -27,7 +27,7 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 @Mod.EventBusSubscriber(modid = SOLSweetPotato.MOD_ID, bus = MOD)
 public final class SOLSweetPotato
 {
-	public static final String MOD_ID = "solapplepie";
+	public static final String MOD_ID = "solhashbrown";
 	
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 

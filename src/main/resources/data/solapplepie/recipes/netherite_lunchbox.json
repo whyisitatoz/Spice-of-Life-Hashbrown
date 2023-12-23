@@ -10,10 +10,10 @@
       "item": "minecraft:netherite_scrap"
     },
     "B": {
-      "item": "solapplepie:lunchbox"
+      "item": "solhashbrown:golden_lunchbox"
     }
   },
   "result": {
-    "item": "solapplepie:netherite_lunchbox"
+    "item": "solhashbrown:netherite_lunchbox"
   }
 }

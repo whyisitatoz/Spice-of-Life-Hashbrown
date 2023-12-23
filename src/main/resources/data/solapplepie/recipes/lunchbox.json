@@ -10,10 +10,10 @@
       "item": "minecraft:iron_ingot"
     },
     "B": {
-      "item": "solapplepie:lunchbag"
+      "item": "solhashbrown:lunchbag"
     }
   },
   "result": {
-    "item": "solapplepie:lunchbox"
+    "item": "solhashbrown:lunchbox"
   }
 }

@@ -11,9 +11,9 @@ credits = "Vice, creator of Apple Pie Edition, Kevun1, creator of Spice of Life:
 authors = "tarinoita"
 
 [[mods]]
-	modId = "solapplepie"
+	modId = "solhashbrown"
 	version = "${file.jarVersion}"
-	displayName = "Spice of Life: Apple Pie Edition"
+	displayName = "Spice of Life: Hashbrown Edition"
 	description = '''
 A mod designed to encourage dietary variety!
 

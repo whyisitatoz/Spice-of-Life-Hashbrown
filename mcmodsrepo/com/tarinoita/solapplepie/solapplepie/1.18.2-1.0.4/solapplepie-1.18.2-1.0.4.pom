@@ -3,6 +3,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tarinoita.solsweetpotato</groupId>
-  <artifactId>solapplepie</artifactId>
+  <artifactId>solhashbrown</artifactId>
   <version>1.18.2-1.0.4</version>
 </project>

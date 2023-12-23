@@ -1,8 +1,10 @@
 <p align="center">
 	<img width=256px src="GitHub/logo.png" />
 </p>
-A mod designed to encourage dietary variety! This project is a fork of Spice of Life: Potato Edition, which itself was a fork of Spice of Life: Carrot Edition. Potato and Carrot Edition share the same goal of rewarding the player for eating a variety of food. However, there are two main differences:  
+A mod designed to encourage dietary variety! This project is another fork of the Spice of Life set of mods, this time of the Spice of Life: Apple Pie Edition. It works exactly the same as that version except it adds a netherite tier of lunchbox with more slots and config options to control the number of slots for each lunchbox.
 
+Read from the Sweet Potato Edition:
+Potato and Carrot Edition share the same goal of rewarding the player for eating a variety of food. However, there are two main differences:  
 
 1. Rather than permanently giving the player max health when they eat a new food, Potato Edition gives variable benefits depending on how diverse the player's *current* diet is. So if the player receives benefits for eating a bunch of new foods, they have to **maintain** that level of diversity to keep those benefits. This is to encourage automation of a variety of food production systems, rather than encouraging the player to eat each food once. 
 2. The benefits for dietary diversity are completely customizable and not just limited to max health. Benefits can be modifiers of any attribute like max health, attack damage, armor, movement speed, etc., or any potion effect, from vanilla or any mod. The thresholds for acquiring benefits, the exact calculation for food diversity, how much any individual food contributes to diversity, and more are all configurable.
@@ -37,11 +39,11 @@ The ceiling for maxing out your diversity is very high (and can be configured to
 
 This mod also features 3 commands:
 
-- /solapplepie diversity  
+- /solhashbrown diversity  
     Tells you your current diversity score. The score is easily accessed with the Food Book, but this offers another convenient way to do it.
-- /solapplepie clear  
+- /solhashbrown clear  
     Clears the stored list of foods a player has eaten and resets their benefits. This is useful for testing when editing the config or when you want to start over.
-- /solapplepie sync  
+- /solhashbrown sync  
     Forces a sync of the food list to the client, for when something went wrong and it's mismatched.
 
 ### FAQs
@@ -63,7 +65,10 @@ This mod also features 3 commands:
 
 ### Credits
 
-- Many thanks to Kevun1 for creating the original [Spice of Life: Potato Edition](https://github.com/Kevun1/Spice-of-Life-Potato-Edition), my personal favorite Spice of Life variant and a must-have for any of my servers, alongside Pam's Harvestcraft or Farmer's Delight.
-- Thanks also to Cazsius and the rest of the team that worked on [Spice of Life: Carrot Edition](https://github.com/Cazsius/Spice-of-Life-Carrot-Edition), which the original Potato Edition was forked from.
+- Previous Spice of Life mods:
+  - [Spice of Life: Apple Pie Edition](https://github.com/anthxnymc/Spice-of-Life-Apple-Pie)
+  - [Spice of Life: Sweet Potato Edition](https://github.com/tarinoita/Spice-of-Life-Sweet-Potato)
+  - [Spice of Life: Potato Edition](https://github.com/Kevun1/Spice-of-Life-Potato-Edition)
+  - [Spice of Life: Carrot Edition](https://github.com/Cazsius/Spice-of-Life-Carrot-Edition)
 
 

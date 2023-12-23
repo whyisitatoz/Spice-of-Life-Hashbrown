@@ -10,7 +10,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public final class Localization {
 	
-	/** e.g. keyString("tooltip", "eaten_status.not_eaten_1") -> "tooltip.solapplepie.eatenStatus.not_eaten_1") */
+	/** e.g. keyString("tooltip", "eaten_status.not_eaten_1") -> "tooltip.solhashbrown.eatenStatus.not_eaten_1") */
 	public static String keyString(String domain, String path) {
 		return domain + "." + SOLSweetPotato.MOD_ID + "." + path;
 	}

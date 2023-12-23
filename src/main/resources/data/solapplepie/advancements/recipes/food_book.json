@@ -2,7 +2,7 @@
 	"parent": "minecraft:recipes/root",
 	"rewards": {
 		"recipes": [
-			"solapplepie:food_book"
+			"solhashbrown:food_book"
 		]
 	},
 	"criteria": {
@@ -10,7 +10,7 @@
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
-					{ "item": "minecraft:potato" }
+					{ "item": "minecraft:baked_potato" }
 				]
 			}
 		},
@@ -25,7 +25,7 @@
 		"has_the_recipe": {
 			"trigger": "minecraft:recipe_unlocked",
 			"conditions": {
-				"recipe": "solapplepie:food_book"
+				"recipe": "solhashbrown:food_book"
 			}
 		}
 	},

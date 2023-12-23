@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "solapplepie:items/golden_lunchbox"
+    "layer0": "solhashbrown:items/golden_lunchbox"
   }
 }
