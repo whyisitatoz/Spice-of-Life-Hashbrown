@@ -35,6 +35,7 @@ public final class FoodListCommand {
 			literal(name)
 				.then(withPlayerArgumentOrSender(literal("sync"), FoodListCommand::syncFoodList))
 				.then(withPlayerArgumentOrSender(literal("clear"), FoodListCommand::clearFoodList))
+				.then(withPlayerArgumentOrSender(literal("resetBenefits"), FoodListCommand::resetBenefits))
 				.then(withPlayerArgumentOrSender(literal("diversity"), FoodListCommand::displayDiversity))
 				.then(withPlayerArgumentOrSender(literal("resetOrigin"), FoodListCommand::resetPlayerOrigin))
 				.then(withNoArgument(literal("resetAllOrigins"), FoodListCommand::resetAllOrigins))
@@ -93,6 +94,25 @@ public final class FoodListCommand {
 		
 		FoodList.get(target).clearFood();
 		FoodList.get(target).resetFoodsEaten();
+		BenefitsHandler.removeAllBenefits(target);
+		BenefitsHandler.updatePlayer(target);
+		CapabilityHandler.syncFoodList(target);
+		
+		MutableComponent feedback = localizedComponent("clear.success");
+		sendFeedback(context.getSource(), feedback);
+		if (!isTargetingSelf) {
+			target.displayClientMessage(applyFeedbackStyle(feedback), true);
+		}
+		
+		return Command.SINGLE_SUCCESS;
+	}
+
+	static int resetBenefits(CommandContext<CommandSourceStack> context, Player target) {
+		boolean isOp = context.getSource().hasPermission(2);
+		boolean isTargetingSelf = isTargetingSelf(context, target);
+		if (!isOp && !isTargetingSelf)
+			throw new CommandRuntimeException(localizedComponent("no_permissions"));
+
 		BenefitsHandler.removeAllBenefits(target);
 		BenefitsHandler.updatePlayer(target);
 		CapabilityHandler.syncFoodList(target);
